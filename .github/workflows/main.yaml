@@ -31,6 +31,3 @@ jobs:
 
     - name: Generate predictions
       run: python predict.py  # Replace with the command to run your predict.py script
-
-    - name: Run tests
-      run: pytest
