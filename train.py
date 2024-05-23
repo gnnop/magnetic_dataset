@@ -224,8 +224,11 @@ def write_metrics_to_csv(metrics_file, metrics):
 
 
 if __name__ == "__main__":
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     # file direcotries
-    MUMAX_DATA_PATH = r"D:\github\Gavin_Churna\magnetic_dataset\micromagnetic\mumax.csv"
+    MUMAX_DATA_PATH = os.path.join(script_dir, "micromagnetic", "mumax.csv")
+    #MUMAX_DATA_PATH = r"D:\github\Gavin_Churna\magnetic_dataset\micromagnetic\mumax.csv"
     # Output files
     METRICS_FILE = "ml_metrics.csv"
 

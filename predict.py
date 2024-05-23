@@ -31,10 +31,12 @@ def write_predictions_to_excel(predictions_df, excel_filename):
         predictions_df.round(3).to_excel(writer, index=False, float_format="%.3f")
 
 if __name__ == "__main__":
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     # File directories
-    EXPERIMENTAL_DATA_PATH = r"D:\github\Gavin_Churna\magnetic_dataset\prediction\experimental.xlsx"
-    XGB_PREDICTION_FILE = r"D:\github\Gavin_Churna\magnetic_dataset\prediction\XGBprediction.xlsx"
-    ANN_PREDICTION_FILE = r"D:\github\Gavin_Churna\magnetic_dataset\prediction\ANNprediction.xlsx"
+    EXPERIMENTAL_DATA_PATH = os.path.join(script_dir, "prediction", "experimental.xlsx")
+    XGB_PREDICTION_FILE = os.path.join(script_dir, "prediction", "XGBprediction.xlsx")
+    ANN_PREDICTION_FILE = os.path.join(script_dir, "prediction", "ANNprediction.xlsx")
 
     # Read experimental database
     df_exp = pd.read_excel(EXPERIMENTAL_DATA_PATH)
@@ -43,7 +45,7 @@ if __name__ == "__main__":
     X_exp_index = df_exp.set_index(['Compound'])  # Set compound column as index
 
     # Load trained models from file
-    with open(r"D:\github\Gavin_Churna\magnetic_dataset\trained_models.pkl", 'rb') as f:
+    with open(os.path.join(script_dir, "trained_models.pkl"), 'rb') as f:
         models = pickle.load(f)
 
     # Generate predictions using trained models
