@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Train models
+      run: python train.py  # Replace with the command to run your train.py script
+
+    - name: Generate predictions
+      run: python predict.py  # Replace with the command to run your predict.py script
+
+    - name: Run tests
+      run: pytest
