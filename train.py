@@ -114,7 +114,7 @@ def train_models(X_train, y_train):
 
     # Train Tuned Random Forest Regressor
     rf_tuned = RandomForestRegressor(n_estimators=1200, random_state=1, min_samples_leaf=3, bootstrap=True,
-                                      max_features='auto', max_depth=5)
+                                      max_features='sqrt', max_depth=5)
     rf_tuned.fit(X_train, y_train)
 
     # Train Gradient Boosting Regressor
