@@ -11,9 +11,6 @@ The package consists of two main components:
 ## Paper Reference
 For detailed information on the ML framework used in this package, please refer to the following paper:
 
-- **Title:** Accurate Machine Learning Predictions of Coercivity in High-Performance Permanent Magnets
-- **Authors:** Churna Bhandari, Gavin N. Nop, Jonathan D. H. Smith, Durga Paudyal
-- **Year:** 2023
 - **How to Cite:**
 ``` 
   @article{PhysRevApplied.22.024046,
