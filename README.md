@@ -15,7 +15,8 @@ For detailed information on the ML framework used in this package, please refer 
 - **Authors:** Churna Bhandari, Gavin N. Nop, Jonathan D. H. Smith, Durga Paudyal
 - **Year:** 2023
 - **How to Cite:**
-``` @article{PhysRevApplied.22.024046,
+``` 
+  @article{PhysRevApplied.22.024046,
   title = {Accurate machine-learning predictions of coercivity in high-performance permanent magnets},
   author = {Bhandari, Churna and Nop, Gavin N. and Smith, Jonathan D.H. and Paudyal, Durga},
   journal = {Phys. Rev. Appl.},
